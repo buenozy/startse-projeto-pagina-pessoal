@@ -1,0 +1,360 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,200;1,500&display=swap");
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+    font-family: "Poppins", sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-image: linear-gradient(60deg, rgb(105, 100, 100) 0%, white 100%);
+}
+
+ul {
+    display: flex;
+    padding-top: 50px;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+li {
+    list-style: none;
+    padding: 5px;
+}
+
+a {
+    text-decoration: none;
+    margin-right: 5px;
+    color: black;
+}
+
+.contact:link,
+.contact:visited {
+    background-image: linear-gradient(60deg, rgb(105, 100, 100) 100%, white 0%);
+    padding: 14px 25px;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.contact:hover,
+.contact:active {
+    background-image: linear-gradient(60deg, rgb(105, 100, 100) 0%, rgb(207, 206, 206) 100%);
+}
+
+.projeto:link,
+.projeto:visited {
+    background-image: linear-gradient(60deg, rgb(105, 100, 100) 100%, white 0%);
+    padding: 14px 25px;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.projeto:hover,
+.projeto:active {
+    background-image: linear-gradient(60deg, rgb(105, 100, 100) 0%, rgb(207, 206, 206) 100%);
+}
+
+img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+p {
+    font-size: 1.4rem;
+    margin-top: 5px;
+    line-height: 2.5rem;
+    font-weight: 200;
+    letter-spacing: 0.05rem;
+}
+
+.container {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.section-title {
+    font-size: 4rem;
+    font-weight: 500;
+    color: black;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    text-align: center;
+}
+
+/*Seção de apresentação*/
+
+#presentation {
+    background-image: url(./imagens/background-img.jpg);
+    background-size: cover;
+    background-position: top center;
+    position: relative;
+    z-index: 1;
+}
+
+#presentation h1 {
+    display: block;
+    width: fit-content;
+    font-size: 5rem;
+    position: relative;
+    color: transparent;
+    animation: text_reveal 0.5s ease forwards;
+    animation-delay: 1.5s;
+}
+
+#presentation h1:nth-child(1) {
+    animation-delay: 0.8s;
+}
+
+#presentation h1:nth-child(2) {
+    animation-delay: 1.8s;
+}
+
+#presentation h1:nth-child(3) {
+    animation: text_reveal_name 0.5s ease forwards;
+    animation-delay: 2.8s;
+}
+
+#presentation .cta {
+    display: inline-block;
+    padding: 10px 30px;
+    color: gold;
+    background-color: transparent;
+    border: 2px solid gold;
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    margin-top: 20px;
+    transition: 0.5s;
+    transition-property: background-color, color;
+}
+
+#presentation .cta:hover {
+    color: black;
+    font-weight: 500;
+    background-color: gold;
+}
+
+#presentation h1 span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    animation: text_reveal_box 1s ease;
+    animation-delay: 0.5s;
+    background-color: gold;
+}
+
+#presentation h1:nth-child(1) span {
+    animation-delay: 0.5s;
+}
+
+#presentation h1:nth-child(2) span {
+    animation-delay: 1.5s;
+}
+
+#presentation h1:nth-child(3) span {
+    animation-delay: 2.5s;
+}
+
+#presentation::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: 0.6;
+    z-index: -1;
+}
+
+/*Seção Sobre min*/
+
+#photo-container {
+    display: flex;
+    justify-content: center;
+    min-width: 400px;
+    background-image: linear-gradient(60deg, rgb(105, 100, 100) 0%, white 100%);
+}
+
+.photo {
+    border: 1px solid black;
+    border-radius: 50px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    width: 10rem;
+}
+
+#photo-container .photo {
+    transition: 0.5s ease transform;
+}
+
+#photo-container:hover .photo {
+    transform: scale(3);
+}
+
+.about-me-header {
+    padding-top: 5px;
+    margin-bottom: 10px;
+}
+
+.about-me-container {
+    flex-direction: column;
+    min-height: 100vh;
+    min-width: 400px;
+    max-width: 100%;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    padding-left: 100px;
+    padding-right: 100px;
+    font-size: 2rem;
+    text-align: center;
+    background-image: linear-gradient(60deg, rgb(105, 100, 100) 0%, white 100%);
+}
+
+/*Seção de Portifólio*/
+
+#portifolio .portifolio {
+    flex-direction: column;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 100px 0;
+}
+
+#portifolio .portifolio-header h1 {
+    margin-bottom: 50px;
+}
+
+#portifolio .all-projects {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#portifolio .project-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 80%;
+    margin: 20px auto;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+#portifolio .project-info {
+    display: flex;
+    padding: 30px;
+    flex-basis: 50%;
+    height: 100%;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    background-image: linear-gradient(60deg, rgb(105, 100, 100) 0%, white 100%);
+}
+
+#portifolio .project-info h1 {
+    font-size: 4rem;
+    font-weight: 500;
+}
+
+#portifolio .project-info h2 {
+    font-size: 1.8rem;
+    font-weight: 500;
+    margin-top: 10px;
+}
+
+#portifolio .project-img {
+    flex-basis: 50%;
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+}
+
+#portifolio .project-img:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+    opacity: 0.2;
+}
+
+#portifolio .project-img img {
+    transition: 0.5s ease transform;
+}
+
+#portifolio .project-item:hover .project-img img {
+    transform: scale(1.1);
+}
+
+/*Keyframes*/
+
+@keyframes text_reveal {
+    100% {
+        color: white;
+    }
+}
+
+@keyframes text_reveal_name {
+    100% {
+        color: gold;
+        font-weight: 700;
+    }
+}
+
+@keyframes text_reveal_box {
+    50% {
+        width: 100%;
+        left: 0;
+    }
+
+    100% {
+        width: 0;
+        left: 100%;
+    }
+}
+
+/*Media Query*/
+
+@media only screen and (min-width: 768px) {
+    #portifolio .project-item {
+        flex-direction: row;
+        height: 400px;
+        margin: 0;
+        width: 100%;
+        border-radius: 0;
+    }
+
+    #portifolio .all-projects .project-info {
+        height: 100%;
+    }
+
+    #portifolio .all-projects .project-img {
+        height: 100%;
+    }
+
+    #portifolio .project-item:nth-child(even) {
+        flex-direction: row-reverse;
+    }
+}
